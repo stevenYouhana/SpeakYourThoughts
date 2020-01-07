@@ -1,0 +1,21 @@
+.main-dev {
+  /* background-color: yellow; */
+  /* text-align: right; */
+  padding-left: 60%;
+  margin-bottom: 0;
+
+}
+.main-dev .funFact {
+  /* padding-left: 70%; */
+  /* background-color: blue; */
+
+}
+.main-dev p {
+  padding: 10%;
+  font-size: .7rem;
+  word-wrap: break-word;
+}
+h5 {
+  letter-spacing: 2px;
+  margin-bottom: -30px;    
+}

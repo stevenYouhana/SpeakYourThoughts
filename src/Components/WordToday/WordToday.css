@@ -1,0 +1,45 @@
+
+.main {
+  /* width: 100%; */
+
+  /* left: 50%; */
+  /* text-align: center; */
+  /* left: 50%; */
+  /* right: auto; */
+  /* background-color: rgba(201, 46, 49, .4);   */
+}
+.wordToday {
+  color: lightblue;
+  font-style: oblique;
+}
+#thought-input {
+  /* width: 80%; */
+
+}
+.input-wrapper {
+  width: 100%;
+  background-color: rgba(201, 46, 49, .4);
+}
+.user-inputs {
+
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 10%;
+/* background-color: rgba(201, 46, 49, .4); */
+}
+.user-inputs::after {
+  /* content: "";
+  background-color: blue;
+  background-image: url('https://previews.dropbox.com/p/thumb/AApBMSr6mk6VXL66UsQbmwMAj-NTD7IAClcCwo7AA6R9YrxMAyGeipblFSCpYW3LTiMZ0kPctkGYljIOmpnpRmxWLLAyA2Q1ukR7j_cbqIVUhR2pjIMg3Up0ATI4jiAlzF3eGEkpvf_P7U4uDPYscMbgdteY6aSSye9XHkM0thWcojujGRh_G3tXivTIt3inPO5XcnwvF21cx32R_jumfUS2TtQh7S9uqpTbNel2DkQd8TonSk-ru_sLeS4zqmT34S9X4BDru_NZWtSkEUfBvOQWcl-cuAGGBwGhxO_c_5erRBN8kW41cZgzuUN2kaZAcCZbgwPlG-as-cXCP_gQFQMCnlOpS9f7KBKetglWIyoJPA/p.jpeg?fv_content=true&size_mode=5');
+  background-size: contain;
+  opacity: .5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; */
+}

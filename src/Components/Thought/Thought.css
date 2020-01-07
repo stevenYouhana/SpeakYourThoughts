@@ -1,0 +1,10 @@
+#wordToday {
+  font-style: oblique;
+  color: rgba(0, 0, 0, .8);
+}
+.thought p {
+  padding: 0;
+  color: rgba(0, 0, 0, .8);
+  font-size: 14px;
+
+}
