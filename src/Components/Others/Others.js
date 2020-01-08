@@ -1,6 +1,6 @@
 import React from 'react';
 import Thought from '../Thought/Thought';
-
+import Api from '../../util/Api';
 
 export default class Others extends React.Component {
   constructor(props) {
@@ -13,27 +13,26 @@ export default class Others extends React.Component {
     ],
     others: []
     }
-      this.renderFakeThoughts = this.renderFakeThoughts.bind(this);
+    this.renderThoughts = this.renderThoughts.bind(this);
   }
-  renderFakeThoughts() {
-    // return this.state.thoughts.map((thought, i) => {
-    //   return <Thought key={i} thought={thought} />
-    // });
-    this.others();
+  renderThoughts() {
+    console.log('renderThoughts(): ', this.props.getOthers);
+    return this.props.getOthers.map((thought, i) => {
+      return <Thought key={i} thought={thought} />
+    })
   }
-  others = () => {
-    fetch('/others').then(response => response.text())
-      .then(textResponse => {
-        console.log('textResponse: ', textResponse);
-        this.setState({others: [textResponse]});
-      });
+
+  componentDidMount() {
+    console.log('componentDidMount()')
+    Api.othersFor(this.props.wordToday).then(response => {
+      this.setState({others: response.thought});
+    });
   }
   render() {
     return(
       <div>
       <h3>Here is what others thought of <span id="wordToday">{this.props.wordToday}</span></h3>
-        {this.renderFakeThoughts()}
-        {this.state.others}
+        {this.renderThoughts()}
       </div>
     );
   }
