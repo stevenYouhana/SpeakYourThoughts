@@ -15,8 +15,7 @@ export default class FunFact extends React.Component {
   render() {
     return(
       <div className="main-dev">
-        <div className="funFact">
-          <h5>Fun fact</h5>
+        <div className="funFact">          
           <p>{this.state.fact}</p>
         </div>
       </div>

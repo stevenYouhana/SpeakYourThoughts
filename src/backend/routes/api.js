@@ -9,15 +9,13 @@ module.exports = function(app) {
 
   app.get('/others/:word', function(req, res) {
     DB_operations.getOtherThoughtsOn(req.params.word).then(result => {
-      console.log('result: ',result);
       res.json({thoughts: result.map(el => el.thought)});
     });
   })
 
   app.post('/new', function(req, res) {
     console.log("app.get('/new', function(req, res): ",req.body);
-    const data = req.body;
-    console.log('recieved data: ', data)
+    const data = req.body;    
     DB_operations.newRecord(data.email, data.lon, data.lat, data.word, data.thought)
       .then(result => {
         if (result.message !== 'success') res.send(result.toStirng());

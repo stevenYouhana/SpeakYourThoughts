@@ -1,7 +1,7 @@
 import React from 'react';
 import Thought from '../Thought/Thought';
 import Api from '../../util/Api';
-
+import './Others.css';
 export default class Others extends React.Component {
   constructor(props) {
     super(props);
@@ -16,9 +16,9 @@ export default class Others extends React.Component {
     this.renderThoughts = this.renderThoughts.bind(this);
   }
   renderThoughts() {
-    console.log('renderThoughts(): ', this.props.getOthers);
+    // console.log('renderThoughts(): ', this.props.getOthers);
     return this.props.getOthers.map((thought, i) => {
-      return <Thought key={i} thought={thought} />
+        return <Thought key={i} thought={thought} />
     })
   }
 
@@ -31,8 +31,10 @@ export default class Others extends React.Component {
   render() {
     return(
       <div>
-      <h3>Here is what others thought of <span id="wordToday">{this.props.wordToday}</span></h3>
-        {this.renderThoughts()}
+        <h3>Here is what others thought of <span id="wordToday">{this.props.wordToday}</span></h3>
+        <div className="thoughts-section fancy-scrollbar">
+            {this.renderThoughts()}
+        </div>
       </div>
     );
   }

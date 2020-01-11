@@ -1,14 +1,11 @@
 
 const Api = {
   othersFor: (word) => {
-    console.log("othersFor: (word) => ")
     return fetch(`/others/${word}`).then(response => {
-      // console.log(response.json());
       return response.json();
     })
   },
   newRecord: (data) => {
-    console.log('POST: ', data)
     fetch('/new', {
      method: 'post',
      headers: {'Content-Type':'application/json'},

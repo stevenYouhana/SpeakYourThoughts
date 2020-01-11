@@ -3,8 +3,8 @@ import './Thought.css';
 
 const Thought = (props) => {
   return(
-    <div className="thought">
-      <p>*{props.thought}</p>
+    <div className="thought fancy-scrollbar">
+      <p>{props.thought}</p>
     </div>
   );
 }

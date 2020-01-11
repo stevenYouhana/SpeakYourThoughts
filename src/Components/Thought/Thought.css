@@ -2,9 +2,19 @@
   font-style: oblique;
   color: rgba(0, 0, 0, .8);
 }
-.thought p {
-  padding: 0;
-  color: rgba(0, 0, 0, .8);
-  font-size: 14px;
+.thought {
+  background-color: #ffffe5;
+  border: none;
+  border-color: rgba(0, 0, 0, .8);
 
+  padding: 15px;
+  margin-bottom: 10px;
+  border-top: none;
+  border-radius: 25px;
+}
+.thought p {
+  display: table-cell;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, .8);
+  font-size: 15px;
 }

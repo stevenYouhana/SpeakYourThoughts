@@ -11,15 +11,15 @@ class App extends React.Component {
     this.wordToday = this.wordToday.bind(this);
   }
   wordToday() {
-    let ran = Math.floor(Math.random() * Math.floor(this.state.words.length));    
+    let ran = Math.floor(Math.random() * Math.floor(this.state.words.length));
     return this.state.words[ran];
   }
   render() {
     return (
       <div className="App">
         <Header />
-        <WordToday wordToday={this.wordToday()} />
         <FunFact />
+        <WordToday wordToday={this.wordToday()} />
       </div>
     );
   }
